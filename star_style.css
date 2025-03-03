@@ -1,0 +1,268 @@
+
+/* ----- STILE TESTO BODY E TITOLI -------------------------*/
+
+body { background-color: #d1d1e0; 
+       font-family: serif; 
+       font-size: 16px; }
+
+
+h1 { font-size: 36px; 
+     text-shadow: 3px -3px 3px  white;
+     padding-left: 10px;  }
+
+
+h1 > img { vertical-align: text-bottom; }
+
+
+h2 { text-decoration: underline 2px; }
+
+
+
+
+
+
+
+/* ------ STILE DELLE BOX E CONTAINERS ---------------------*/
+
+#container { margin: 0 auto;
+             padding: 0; 
+             width: 1000px;
+             min-width: 70%;
+             border: 1px solid; }
+
+
+#_1,#_2,#_3,#_4 { min-width: 400px; 
+                  height: 400px;
+                  /* display: inline-block; */
+                  border: 1px solid rgb(208, 184, 231);
+                  padding: 15px 20px; 
+                  float: left; }
+
+#_1 { border: 2px solid black;
+      border-radius: 40px 20px 80px 16px;
+      text-align: center; }
+
+#_1 #lrt { text-align: left; 
+           position: relative; top: 20px; }
+   
+#_2 { border: 2px solid black;
+      border-radius: 40px 20px 80px 16px; }
+
+#_3 { border: 2px solid black;
+      border-radius: 50px 0 0 0 / 20px 0 0 0 ; }
+
+#_4 { border: 2px solid black;
+      text-align: center;
+      background-image: linear-gradient(#0086b3, #b3ecff); }
+
+figure { display: block;
+         position: relative;
+         top: 15%; }
+
+
+/* #container2 { display: flow-root; } ALTERNATIVA*/
+
+.clearfix::after { content: "";
+                   display: table;
+                   clear: both; } 
+                   
+/*Container aggiunto per fare il clearfix degli elementi
+flottanti. ::after è un pseudo-elemento che consente di
+inserire contenuti dopo un elemento specificato, in questo
+caso l'elemento è vuoto, e si usa a scopo stilistico/
+corregere float. il display block è riferito all'elemnto
+fantasma aggiunto dall' ::after, in questo caso nullo
+table è ancora meglio al giorno d'oggi, più robusto*/
+
+#audio1 { float: left; 
+          width: 400px;}
+
+.audio p { position: relative;
+           left: 100px;
+           text-transform: uppercase;
+           color: crimson;
+           font-weight: bold;
+           font-family: cursive;
+           text-shadow: 2px 2px 3px rgb(189, 140, 227); }
+
+.audio::after { content: "";
+                clear: both;
+                display: block; }           
+
+
+
+
+
+/* ----- STILE TABELLA ----------------------------------- */
+
+table { background-color: rgba(255, 255, 255, 0.239);
+        border-spacing: 3px; }
+
+
+td { background-color: rgba(0, 255, 255, 0.285); 
+     font-style: italic; }
+
+
+th { background-color: rgba(0, 183, 255, 0.232); }
+
+
+td,th { width: 110px;
+        height: 23px;
+        text-align: center; }
+
+
+
+
+
+/* ------ STILI FORMS--------------------------------------*/
+
+#button:hover { background-color: yellow;
+                border-radius: 25px; }
+
+
+#button { width: 50px;
+          height: 50px; 
+          margin: 0 auto; display: block;}
+
+button img { width:15px; height: 15px;
+             display: inline-block;
+             position: relative;
+             margin: 0 2px;
+             top: 2px; }
+
+input[type="text"] { border-width: 0 0 2px 0;
+                     background-color: transparent; 
+                     border-radius: 2px;
+                     background-image: url("Immagini/stella_logo_16px.png");
+                     background-repeat: no-repeat;
+                     background-position: right; 
+                     margin-left: 4px; }
+
+input[type="submit"]:hover { background-color: yellow;
+                             cursor: pointer; }
+
+input[value="Invia dati"] { width: 90px;
+                            text-align: center;
+                            display: block;
+                            margin: auto;
+                            /*da capire perche vuole il block*/ }
+                            
+
+fieldset { width: 370px; 
+           border-radius: 20px;
+           border: 2px solid rgb(193, 255, 192); 
+           background-image: url(Immagini/background_blue.jpg); }
+
+legend { margin-bottom: 20px;
+         padding: 4px 8px;
+         font-size: 20px; 
+         font-style: oblique;
+         text-align: center;
+         border: 1px solid  rgb(193, 255, 192);
+         border-radius: 2px;
+         background-color: aquamarine;}
+
+#speciale { border-color: aquamarine;
+            padding: 4px 8px 6px 8px; 
+            cursor: url("Immagini/cursori/gam1179.cur"), pointer;
+            width: 50%; 
+            margin: 0 auto;
+            display: block; 
+            /*l'elemento button è di sua natura inline-block
+            e per centrarlo con margin:0 auto; ho dovuto
+            cambiare il display in block*/ }
+
+
+
+
+
+/* ----- STILE LISTE -----------------------------------------*/
+
+/*Alternativa migliore rispetto a list-style-image in quanto
+quella proprietà non permette di ridimensionare l'immagine
+e ridimensionandola online tipo a 16px X 16px l'immagine 
+perde qualità e fa schifo */
+
+#_1 > ul {
+    list-style: none;
+    padding: 0; margin: 0;  }
+
+#_1 li::before {
+    content: "";
+    display: inline-block;
+    width: 16px; height: 16px;
+    background-image: url("Immagini/stella_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+
+    /*sposta i punti leggermente verso il basso
+     perchè non erano perfettamente allineati*/
+    position: relative;
+    top: 2px;
+    left: 2px;  }
+
+#_1 li {
+    border: 1px solid #e6e6ff; 
+    border-radius: 4px; 
+    margin: 2px auto;
+    padding: 5px;
+    width: 65%;
+    background-color: #ccccff;  
+    text-align: left;}
+
+#_3 .main_list {
+    list-style: square; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
